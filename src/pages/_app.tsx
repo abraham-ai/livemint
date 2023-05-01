@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import type { AppProps } from "next/app";
 import AppContext from "context/AppContext";
 import "styles/globals.css";
-import WalletProvider from "providers/WalletProvider";
+import WalletProviderGoerli from "providers/WalletProviderGoerli";
 
 function App({ Component, pageProps }: AppProps) {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -17,9 +17,9 @@ function App({ Component, pageProps }: AppProps) {
         setUsername,
       }}
     >
-      <WalletProvider>
+      <WalletProviderGoerli>
         <Component {...pageProps} />
-      </WalletProvider>
+      </WalletProviderGoerli>
     </AppContext.Provider>
   );
 }
