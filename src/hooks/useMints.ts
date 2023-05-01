@@ -8,7 +8,7 @@ const useMints = () => {
   );
 
   return {
-    mints: data?.mints,
+    mints: data?.livemints,
     isLoading,
     error: data?.error,
     mutate,

@@ -12,9 +12,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const eden = new EdenClient();
     eden.setAuthToken(authToken);
-    console.log("get mints")
     const result = await eden.getMints(null);
-    console.log("result", result)
     return res.status(200).json(result);
   } catch (error: any) {
     console.error(error);
