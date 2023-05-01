@@ -18,7 +18,7 @@ const { chains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "Eden app",
+  appName: "Eden livemint",
   chains,
 });
 
