@@ -9,6 +9,7 @@ import { useAccount } from "wagmi";
 import AppContext from 'context/AppContext'
 import Account from "components/account/Account";
 import LiveMint from "components/LiveMint";
+import Mints from "components/Mints";
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -39,6 +40,7 @@ const MainPageContent = () => {
       ...(isConnected && isSignedIn ? [
         getItem('Account', '1'),
         getItem('Mint', '2'),
+        getItem('Tokens', '3'),
       ] : []),
     ]),
   ];
@@ -87,6 +89,7 @@ const MainPageContent = () => {
         <Content style={{ margin: '0 16px', padding: "16px", background: colorBgContainer }}>    
           {activeItem === '1' && <Account />}
           {activeItem === '2' && <LiveMint />}
+          {activeItem === '3' && <Mints />}
         </Content>
         <Footer style={{ textAlign: 'center' }}></Footer>
       </Layout>

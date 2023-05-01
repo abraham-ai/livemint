@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { usePrepareContractWrite, useContractWrite, useAccount } from "wagmi";
 import { contracts } from "../const/contracts";
-import { getMerkleProof } from "util/merkle";
 
 const useLiveMint = () => {
-  console.log("contract address", contracts.LiveMint.address);
   const { address } = useAccount();
-  console.log("my address", address)
   const [merkleProof, setMerkleProof] = useState(null);
+
+  console.log("contract address", contracts.LiveMint.address);
+  console.log("my address", address)
 
   useEffect(() => {
     const fetchMerkleProof = async () => {
