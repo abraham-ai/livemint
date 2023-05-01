@@ -2,7 +2,7 @@ import EdenLivemintContract from "eden-contracts/out/EdenLivemint.sol/EdenLivemi
 import BroadcastGoerli from "eden-contracts/broadcast/Deploy.s.sol/5/run-latest.json";
 
 const getContractAddress = (contractName: string) => {
-  const chain = process.env.NEXT_PUBLIC_BLOCKCHAIN_ENV;
+  const chain = "goerli";
 
   let broadcast;
   switch (chain) {
