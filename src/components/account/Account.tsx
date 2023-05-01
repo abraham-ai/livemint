@@ -3,7 +3,7 @@ import AppContext from 'context/AppContext'
 
 import { useAccount } from "wagmi";
 
-import EthereumAuth from "components/Account/EthereumAuth";
+import EthereumAuth from "components/account/EthereumAuth";
 
 const AccountTab = () => {
   const { address, isConnected } = useAccount();

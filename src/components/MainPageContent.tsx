@@ -7,7 +7,7 @@ import type { MenuProps } from 'antd';
 
 import { useAccount } from "wagmi";
 import AppContext from 'context/AppContext'
-import Account from "components/Account/Account";
+import Account from "components/account/Account";
 import LiveMint from "components/LiveMint";
 
 
