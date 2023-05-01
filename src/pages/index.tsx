@@ -28,8 +28,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Eden App</title>
-        <meta name="description" content="Eden API interface" />
+        <title>Eden Livemint</title>
+        <meta name="description" content="Livemint interface for Eden" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainPageContent />

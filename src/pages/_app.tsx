@@ -1,15 +1,10 @@
 import React, { useState, useContext } from "react";
 import type { AppProps } from "next/app";
-import { GeneratorState } from "context/AppContext";
 import AppContext from "context/AppContext";
 import "styles/globals.css";
 import WalletProvider from "providers/WalletProvider";
-import WalletProviderGoerli from "providers/WalletProvider/WalletProviderGoerli";
 
 function App({ Component, pageProps }: AppProps) {
-  const [generators, setGenerators] = useState<Record<string, GeneratorState>>(
-    {}
-  );
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [username, setUsername] = useState<string | null>(null);
 
@@ -20,13 +15,11 @@ function App({ Component, pageProps }: AppProps) {
         setIsSignedIn,
         username,
         setUsername,
-        generators,
-        setGenerators,
       }}
     >
-      <WalletProviderGoerli>
+      <WalletProvider>
         <Component {...pageProps} />
-      </WalletProviderGoerli>
+      </WalletProvider>
     </AppContext.Provider>
   );
 }
